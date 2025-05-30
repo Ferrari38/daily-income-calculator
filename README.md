@@ -55,30 +55,30 @@
 
     <h3>รายรับ💵</h3>
     <label>รายได้จาก GRAB (บาท):</label>
-    <input type=จำนวนเงิน"number" id="grab" />
+    <input type="number" จำนวนเงิน id="grab" />
 
     <label>รายได้จาก BOLT (บาท):</label>
-    <input type=จำนวนเงิน"number" id="bolt" />
+    <input type="number" จำนวนเงิน id="bolt" />
 
     <label>ทิป (บาท):</label>
-    <input type=จำนวนเงิน"number" id="tip" />
+    <input type="number" จำนวนเงิน id="tip" />
 
     <label>รายรับอื่นๆ (บาท):</label>
-    <input type=จำนวนเงิน"number" id="extraIncome" />
+    <input type="number" จำนวนเงิน id="extraIncome" />
 
     <h3>รายจ่าย💸</h3>
     <label>ค่าน้ำมัน (บาท):</label>
-    <input type=จำนวนเงิน"number" id="oil" />
+    <input type="number" จำนวนเงิน id="oil" />
 
     <label>รายจ่ายอื่นๆ (บาท):</label>
-    <input type=ค่าใช้จ่าย"number" id="otherExpense" />
+    <input type="number" จำนวนเงิน id="otherExpense" />
 
     <h3>ระยะทางที่ใช้🛵</h3>
     <label>เริ่มงาน (กม.):</label>
-    <input type=เลขไมค์"number" id="startKm" />
+    <input type="number" เลขไมล์ id="startKm" />
 
     <label>เลิกงาน (กม.):</label>
-    <input type=เลขไมค์"number" id="endKm" />
+    <input type="number" เลขไมค์ id="endKm" />
 
     <button onclick="calculate()">คำนวณ</button>
     <button onclick="resetForm()">ล้างข้อมูล</button>
@@ -100,7 +100,7 @@
 
       const distance = endKm - startKm;
       if (distance < 0) {
-        alert("กรุณากรอกเลขกิโลเมตรให้ถูกต้อง (เลิกงานต้องมากกว่าเริ่มงาน)");
+        alert("มึงกรอกเลขผิด (เลิกงานต้องมากกว่าเริ่มงาน)");
         return;
       }
 
@@ -112,7 +112,7 @@
       const maintenance = totalIncomeBeforeMaintenance * 0.10;
 
       const totalExpenses = oil + otherExpense + maintenance + boltCommission;
-      const netIncome = totalIncomeBeforeMaintenance - totalExpenses + tip;
+      const netIncome = totalIncomeBeforeMaintenance - totalExpenses ;
 
       const halfIncomePlusMaintenance = (netIncome / 2 + maintenance).toFixed(2);
       const costPerKm = distance > 0 ? (totalIncomeBeforeCommission / distance).toFixed(2) : "0.00";
