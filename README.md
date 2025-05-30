@@ -140,8 +140,8 @@
         <strong>รวมรายจ่ายทั้งหมด:<strong> ${format(totalExpenses)} บาท<br><br>
 
         <strong>รายได้สุทธิ:</strong> ${format(netIncome)} บาท<br>
-        <strong>ทิป:</strong> ${format(tip)} บาท<br>
-        <strong>รายได้รวมทิป:</strong> ${netIncomePlusTip} บาท<br>
+        ทิป: ${format(tip)} บาท<br>
+        รายได้รวมทิป: ${netIncomePlusTip} บาท<br>
         <strong>หาร 2 + ค่าซ่อม:</strong> ${halfIncomePlusMaintenance} บาท<br>
         <strong>หาร 2 + ทิป:<strong> ${halfIncomePlusTip} บาท<br><br>
         
