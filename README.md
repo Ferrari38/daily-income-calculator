@@ -117,6 +117,7 @@
       
       const halfIncomePlusMaintenance = (netIncome / 2 + maintenance).toFixed(2);
       const halfIncomePlusTip = (netIncome / 2 + tip)
+      
       const costPerKm = distance > 0 ? (totalIncomeBeforeCommission / distance).toFixed(2) : "0.00";
 
       const format = n => n.toLocaleString(undefined, { minimumFractionDigits: 2 });
@@ -143,6 +144,7 @@
         <strong>รายได้รวมทิป:</strong> ${netIncomePlusTip} บาท<br>
         <strong>หาร 2 + ค่าซ่อม:</strong> ${halfIncomePlusMaintenance} บาท<br><br>
         <strong>หาร 2 + ทิป:<strong> ${halfIncomePlusTip} บาท<br>
+        
         <strong>ระยะทางที่ใช้:</strong> ${distance} กม.<br>
         <strong>บาทต่อกิโลเมตร:</strong> ${costPerKm} บาท/กม.
       `;
