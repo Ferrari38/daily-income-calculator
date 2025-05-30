@@ -114,9 +114,9 @@
       const totalExpenses = oil + otherExpense + maintenance;
       const netIncome = totalIncomeBeforeMaintenance - totalExpenses;
       const netIncomePlusTip = netIncome + tip;
+      const halfIncomePlusTip = (netIncome / 2 + tip)
       
       const halfIncomePlusMaintenance = (netIncome / 2 + maintenance).toFixed(2);
-      const halfIncomePlusTip = (netIncome / 2 + tip)
       
       const costPerKm = distance > 0 ? (totalIncomeBeforeCommission / distance).toFixed(2) : "0.00";
 
