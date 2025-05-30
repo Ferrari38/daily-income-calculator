@@ -51,7 +51,7 @@
     <h2>💰คำนวณรายได้ประจำวัน</h2>
 
     <label>🗓️วันที่:</label>
-    <input type="date" id="date" />
+    <input type="date" id="date" placeholder="เลือกวันที่" />
 
     <h3>รายรับ💵</h3>
     <label>รายได้จาก GRAB (บาท):</label>
@@ -111,9 +111,10 @@
       const totalIncomeBeforeMaintenance = grab + boltAfter + extraIncome;
       const maintenance = totalIncomeBeforeMaintenance * 0.10;
 
-      const totalExpenses = oil + otherExpense + maintenance + boltCommission;
-      const netIncome = totalIncomeBeforeMaintenance - totalExpenses ;
-
+      const totalExpenses = oil + otherExpense + maintenance;
+      const netIncome = totalIncomeBeforeMaintenance - totalExpenses;
+      const netIncomPlusTip = netIncome + tip;
+      
       const halfIncomePlusMaintenance = (netIncome / 2 + maintenance).toFixed(2);
       const costPerKm = distance > 0 ? (totalIncomeBeforeCommission / distance).toFixed(2) : "0.00";
 
@@ -137,6 +138,8 @@
         รวมรายจ่ายทั้งหมด: ${format(totalExpenses)} บาท<br><br>
 
         <strong>รายได้สุทธิ:</strong> ${format(netIncome)} บาท<br>
+        <strong>ทิป:<strong> ${format(tip)} บาท<br>
+        <strong>รายได้รวมทิป<strong> ${netIncomePlusTip} บาท<br>
         <strong>หาร 2 + ค่าซ่อม:</strong> ${halfIncomePlusMaintenance} บาท<br><br>
 
         <strong>ระยะทางที่ใช้:</strong> ${distance} กม.<br>
