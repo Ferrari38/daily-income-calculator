@@ -55,30 +55,30 @@
 
     <h3>รายรับ💵</h3>
     <label>รายได้จาก GRAB (บาท):</label>
-    <input type="number" จำนวนเงิน id="grab" />
+    <input type="number" id="grab" placeholder="รายรับจาก GRAB"/>
 
     <label>รายได้จาก BOLT (บาท):</label>
-    <input type="number" จำนวนเงิน id="bolt" />
+    <input type="number" id="bolt" placeholder="รายรับจาก Bolt"/>
 
     <label>ทิป (บาท):</label>
-    <input type="number" จำนวนเงิน id="tip" />
+    <input type="number" id="tip" placeholder="กรอกจำนวนเงิน"/>
 
     <label>รายรับอื่นๆ (บาท):</label>
-    <input type="number" จำนวนเงิน id="extraIncome" />
+    <input type="number" id="extraIncome" placeholder="กรอกจำนวนเงิน" />
 
     <h3>รายจ่าย💸</h3>
     <label>ค่าน้ำมัน (บาท):</label>
-    <input type="number" จำนวนเงิน id="oil" />
+    <input type="number" id="oil" placeholder="กรอกจำนวนเงิน" />
 
     <label>รายจ่ายอื่นๆ (บาท):</label>
-    <input type="number" จำนวนเงิน id="otherExpense" />
+    <input type="number" id="otherExpense" placeholder="กรอกจำนวนเงิน" />
 
     <h3>ระยะทางที่ใช้🛵</h3>
     <label>เริ่มงาน (กม.):</label>
-    <input type="number" เลขไมล์ id="startKm" />
+    <input type="number" id="startKm" placeholder="เลขไมล์" />
 
     <label>เลิกงาน (กม.):</label>
-    <input type="number" เลขไมค์ id="endKm" />
+    <input type="number" id="endKm" placeholder="เลขไมค์" />
 
     <button onclick="calculate()">คำนวณ</button>
     <button onclick="resetForm()">ล้างข้อมูล</button>
