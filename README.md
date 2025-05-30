@@ -48,37 +48,37 @@
 </head>
 <body>
   <div class="container">
-    <h2>คำนวณรายได้ประจำวัน</h2>
+    <h2>💰คำนวณรายได้ประจำวัน</h2>
 
-    <label>วันที่:</label>
+    <label>🗓️วันที่:</label>
     <input type="date" id="date" />
 
-    <h3>รายรับ</h3>
+    <h3>รายรับ💵</h3>
     <label>รายได้จาก GRAB (บาท):</label>
-    <input type="number" id="grab" />
+    <input type=จำนวนเงิน"number" id="grab" />
 
     <label>รายได้จาก BOLT (บาท):</label>
-    <input type="number" id="bolt" />
+    <input type=จำนวนเงิน"number" id="bolt" />
 
     <label>ทิป (บาท):</label>
-    <input type="number" id="tip" />
+    <input type=จำนวนเงิน"number" id="tip" />
 
     <label>รายรับอื่นๆ (บาท):</label>
-    <input type="number" id="extraIncome" />
+    <input type=จำนวนเงิน"number" id="extraIncome" />
 
-    <h3>รายจ่าย</h3>
+    <h3>รายจ่าย💸</h3>
     <label>ค่าน้ำมัน (บาท):</label>
-    <input type="number" id="oil" />
+    <input type=จำนวนเงิน"number" id="oil" />
 
     <label>รายจ่ายอื่นๆ (บาท):</label>
-    <input type="number" id="otherExpense" />
+    <input type=ค่าใช้จ่าย"number" id="otherExpense" />
 
-    <h3>ระยะทางที่ใช้</h3>
+    <h3>ระยะทางที่ใช้🛵</h3>
     <label>เริ่มงาน (กม.):</label>
-    <input type="number" id="startKm" />
+    <input type=เลขไมค์"number" id="startKm" />
 
     <label>เลิกงาน (กม.):</label>
-    <input type="number" id="endKm" />
+    <input type=เลขไมค์"number" id="endKm" />
 
     <button onclick="calculate()">คำนวณ</button>
     <button onclick="resetForm()">ล้างข้อมูล</button>
