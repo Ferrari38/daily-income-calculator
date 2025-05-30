@@ -1,5 +1,8 @@
 
 <style>
+ header {
+  display: none;
+ }
   * {
     box-sizing: border-box;
   }
