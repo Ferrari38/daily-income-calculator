@@ -78,7 +78,7 @@
     <input type="number" id="startKm" placeholder="เลขไมล์" />
 
     <label>เลิกงาน (กม.):</label>
-    <input type="number" id="endKm" placeholder="เลขไมค์" />
+    <input type="number" id="endKm" placeholder="เลขไมล์" />
 
     <button onclick="calculate()">คำนวณ</button>
     <button onclick="resetForm()">ล้างข้อมูล</button>
@@ -113,7 +113,7 @@
 
       const totalExpenses = oil + otherExpense + maintenance;
       const netIncome = totalIncomeBeforeMaintenance - totalExpenses;
-      const netIncomPlusTip = netIncome + tip;
+      const netIncomePlusTip = netIncome + tip;
       
       const halfIncomePlusMaintenance = (netIncome / 2 + maintenance).toFixed(2);
       const costPerKm = distance > 0 ? (totalIncomeBeforeCommission / distance).toFixed(2) : "0.00";
@@ -138,8 +138,8 @@
         รวมรายจ่ายทั้งหมด: ${format(totalExpenses)} บาท<br><br>
 
         <strong>รายได้สุทธิ:</strong> ${format(netIncome)} บาท<br>
-        <strong>ทิป:<strong> ${format(tip)} บาท<br>
-        <strong>รายได้รวมทิป<strong> ${netIncomePlusTip} บาท<br>
+        <strong>ทิป:</strong> ${format(tip)} บาท<br>
+        <strong>รายได้รวมทิป:</strong> ${netIncomePlusTip} บาท<br>
         <strong>หาร 2 + ค่าซ่อม:</strong> ${halfIncomePlusMaintenance} บาท<br><br>
 
         <strong>ระยะทางที่ใช้:</strong> ${distance} กม.<br>
