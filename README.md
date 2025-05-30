@@ -142,8 +142,8 @@
         <strong>รายได้สุทธิ:</strong> ${format(netIncome)} บาท<br>
         <strong>ทิป:</strong> ${format(tip)} บาท<br>
         <strong>รายได้รวมทิป:</strong> ${netIncomePlusTip} บาท<br>
-        <strong>หาร 2 + ค่าซ่อม:</strong> ${halfIncomePlusMaintenance} บาท<br><br>
-        <strong>หาร 2 + ทิป:<strong> ${halfIncomePlusTip} บาท<br>
+        <strong>หาร 2 + ค่าซ่อม:</strong> ${halfIncomePlusMaintenance} บาท<br>
+        <strong>หาร 2 + ทิป:<strong> ${halfIncomePlusTip} บาท<br><br>
         
         <strong>ระยะทางที่ใช้:</strong> ${distance} กม.<br>
         <strong>บาทต่อกิโลเมตร:</strong> ${costPerKm} บาท/กม.
