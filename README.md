@@ -122,6 +122,9 @@
 
     <label>เลิกงาน (กม.):</label>
     <input type="number" id="endKm" placeholder="เลขไมล์" />
+    <label>หรือ:</label>
+    <label>ระยะทางที่ใช้ (กม.):</label>
+    <input type="number" id="distance1" />
 
     <button onclick="calculate()">คำนวณ</button>
     <button onclick="resetForm()">ล้างข้อมูล</button>
@@ -140,13 +143,20 @@
       const otherExpense = parseFloat(document.getElementById('otherExpense').value) || 0;
       const startKm = parseFloat(document.getElementById('startKm').value) || 0;
       const endKm = parseFloat(document.getElementById('endKm').value) || 0;
+      const distanceInput = parseFloat(document.getElementById('distance1').value) || 0;
 
-      const distance = endKm - startKm;
-      if (distance < 0) {
-        alert("มึงกรอกเลขผิด (เลิกงานต้องมากกว่าเริ่มงาน)");
-        return;
+      let distance = 0;
+      if (endKm > 0 && startKm > 0) {
+        distance = endKm - startKm;
+        if (distance < 0) {
+          alert("กรุณากรอกเลขกิโลเมตรให้ถูกต้อง (เลิกงานต้องมากกว่าเริ่มงาน)");
+          return;
+        }
+      } else if (distanceInput > 0) {
+        distance = distanceInput;
       }
-
+      
+     
       const totalIncomeBeforeCommission = grab + bolt + tip + extraIncome;
 
       const boltCommission = bolt * 0.18;
@@ -156,8 +166,9 @@
 
       const totalExpenses = oil + otherExpense + maintenance;
       const netIncome = totalIncomeBeforeMaintenance - totalExpenses;
+      const halfIncome = (netIncome / 2 );
       const netIncomePlusTip = netIncome + tip;
-      const halfIncomePlusTip = (netIncome / 2 + tip)
+      const halfIncomePlusTip = (netIncome / 2 + tip);
       
       const halfIncomePlusMaintenance = (netIncome / 2 + maintenance).toFixed(2);
       
@@ -185,6 +196,7 @@
         <strong>รายได้สุทธิ:</strong> ${format(netIncome)} บาท<br>
         ทิป: ${format(tip)} บาท<br>
         รายได้รวมทิป: ${netIncomePlusTip} บาท<br>
+        รายได้แบ่งครึ่ง:${halfIncome}บาท<br>
         <strong>หาร 2 + ค่าซ่อม:</strong> ${halfIncomePlusMaintenance} บาท<br>
         <strong>หาร 2 + ทิป:<strong> ${halfIncomePlusTip} บาท<br><br>
         
