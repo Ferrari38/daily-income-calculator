@@ -124,7 +124,7 @@
     <input type="number" id="endKm" placeholder="เลขไมล์" />
     <label>หรือ:</label>
     <label>ระยะทางที่ใช้ (กม.):</label>
-    <input type="number" id="distance1" />
+    <input type="number" id="distance1" placeholder="เลขไมล์" />
 
     <button onclick="calculate()">คำนวณ</button>
     <button onclick="resetForm()">ล้างข้อมูล</button>
